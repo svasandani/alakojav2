@@ -24,3 +24,17 @@
     height: 100%;
     object-fit: cover;
 }
+
+.push-left {
+    margin-left: -25px;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.landing-section h2 {
+    transition: 0.3s ease-out;
+}
+
+.landing-section p {
+    transition: 0.3s ease-out;
+}

@@ -5,8 +5,13 @@
 }
 
 @font-face {
+    font-family: 'Helvetica Light';
+    src: url(helveticalight.ttf);
+}
+
+@font-face {
     font-family: 'Helvetica';
-    src: url(helvetica.woff);
+    src: url(helvetica.ttf);
 }
 
 @font-face {
