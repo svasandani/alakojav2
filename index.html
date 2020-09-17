@@ -76,16 +76,17 @@
             background: var(--bg-color);
             color: var(--text-color);
             font-family: 'Helvetica';
+            scroll-behavior: smooth;
         }
 
-        h1 {
+        h2 {
             font-family: 'Helvetica Bold';
             font-size: 8em;
             margin-bottom: 0.15em;
             margin-top: -0.25em;
         }
 
-        h1.hollow {
+        h2.hollow {
             font-family: 'Helvetica Outline';
             white-space: nowrap;
         }
@@ -364,12 +365,13 @@
     </style>
     <link href="bead.css" rel="stylesheet">
     <link href="landingcarousel.css" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <div class="bead"></div>
-            <span class="logo">Alakoja</span>
+            <span class="logo"><h1>Alakoja</h1></span>
             <a href="#services" class="nav-link">
                 <span class="nav-number">01.</span>
                 <span class="nav-name">Services</span>
@@ -399,8 +401,8 @@
             <div class="o-t-landing landing-carousel-slide">
                 <div class="pull-text pull-left">
                     <div class="pull-text-padding"></div>
-                    <h1 class="hollow">Optimistic</h1>
-                    <h1>Technologists</h1>
+                    <h2 class="hollow">Optimistic</h2>
+                    <h2>Technologists</h2>
                     <p class="stinger-text">We are a full service design and innovation group that cracks tough problems through modern technology for established organizations and startups looking to change the world.</p>
                 </div>
                 <div class="pull-image pull-right bg-1">
@@ -412,8 +414,8 @@
             <div class="c-d-landing landing-carousel-slide">
                 <div class="pull-text pull-left">
                     <div class="pull-text-padding"></div>
-                    <h1 class="hollow">Creative</h1>
-                    <h1>Designers</h1>
+                    <h2 class="hollow">Creative</h2>
+                    <h2>Designers</h2>
                     <p class="stinger-text">We are a full service design and innovation group that cracks tough problems through modern technology for established organizations and startups looking to change the world.</p>
                 </div>
                 <div class="pull-image pull-right">
@@ -427,14 +429,52 @@
             <div class="d-e-landing landing-carousel-slide">
                 <div class="pull-text pull-left">
                     <div class="pull-text-padding"></div>
-                    <h1 class="hollow">Data-driven</h1>
-                    <h1>Engineers</h1>
+                    <h2 class="hollow">Data-driven</h2>
+                    <h2>Engineers</h2>
                     <p class="stinger-text">We are a full service design and innovation group that cracks tough problems through modern technology for established organizations and startups looking to change the world.</p>
                 </div>
             </div>
             <!-- <div class="next-slide arrow">K</div>
             <div class="prev-slide arrow">O</div> -->
             <div class="scroll-btn arrow">M</div>
+        </section>
+        <section class="featured-section">
+            <h2 class="hollow">Featured</h2><h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <div class="card"><img src="https://source.unsplash.com/random/325x760"></div>
+                    <h3>Squarespace</h3>
+                    <p>Introduction about the project.</p>
+                </div>
+                <div class="project">
+                    <div class="card"><img src="https://source.unsplash.com/random/320x765"></div>
+                    <h3>Bloomberg</h3>
+                    <p>Introduction about the project.</p>
+                </div>
+                <div class="project">
+                    <div class="card"><img src="https://source.unsplash.com/random/325x765"></div>
+                    <h3>AT&amp;T</h3>
+                    <p>Introduction about the project.</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="quote">
+                <span class="quotation">"Some client quote goes here"</span>
+                <span class="attribution">Henry Ford</span>
+            </div>
+            <div class="contact-form">
+                <div class="aside"><h3>Want to learn more?</h3></div>
+                <div class="center">
+                    <form id="contact">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required>
+                        <label for="message">Message</label>
+                        <input type="text" name="message" required>
+                        <button type="submit" name="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
