@@ -32,7 +32,7 @@ h2.hollow {
 }
 
 h2.smaller {
-    font-size: 5em;
+    font-size: 4em;
     margin-bottom: 0.5em;
 }
 
@@ -162,7 +162,7 @@ nav {
 }
 
 .pull-text {
-    padding-left: 10%;
+    padding-left: 5vw;
     padding-top: 15vh;
     overflow-y: hidden;
 }

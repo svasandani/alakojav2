@@ -19,22 +19,22 @@
     width: 250px;
     position: absolute;
     bottom: 0;
-    left: 50px;
+    left: 5vw;
     height: 9px;
     background: var(--text-color);
 }
 
 .services-section {
-    padding-top: 5vh;
-    padding-left: 10vw;
+    padding-top: 10vh;
+    padding-left: 5vw;
     padding-bottom: 15vh;
 }
 
 .services {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 10vh;
-    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fill, 250px);
+    margin-top: 15vh;
+    grid-gap: 80px;
 }
 
 .service {
@@ -44,14 +44,14 @@
 }
 
 .service img {
-    margin-bottom: 1.4em;
+    margin-bottom: 1.2em;
 }
 
 .service h4 {
-    margin-bottom: 0.7em;
+    margin-bottom: 0.6em;
 }
 
 .service p {
     font-size: 1rem;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.17em;
 }

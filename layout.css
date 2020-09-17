@@ -98,15 +98,3 @@ button:hover {
     transition: 0.1s linear;
     cursor: pointer;
 }
-
-.float-up {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.2s linear;
-}
-
-.float-up.floated {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: 0.2s linear;
-}
