@@ -18,3 +18,8 @@
     font-family: 'Helvetica Outline';
     src: url(helveticaoutline.ttf);
 }
+
+@font-face {
+    font-family: 'Arrows';
+    src: url(arrows.ttf);
+}

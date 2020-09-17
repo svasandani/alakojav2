@@ -87,6 +87,7 @@
 
         h1.hollow {
             font-family: 'Helvetica Outline';
+            white-space: nowrap;
         }
 
         p {
@@ -100,7 +101,7 @@
         }
 
         .arrow {
-            font-family: sans-serif;
+            font-family: 'Arrows';
         }
 
         /* HEADER */
@@ -116,8 +117,8 @@
             width: 100%;
             height: 60px;
             margin-bottom: 45px;
-            display: flex;
-            flex-flow: row nowrap;
+            display: grid;
+            grid-template-columns: 200px 100px 100px 100px 100px 1fr;
         }
 
         .bead {
@@ -140,11 +141,15 @@
             font-weight: bold;
         }
 
+        .logo:hover {
+            cursor: pointer;
+        }
+
         .nav-link {
             width: 130px;
             padding: 15px;
             align-self: flex-end;
-            padding-bottom: 0px;
+            padding-bottom: 2px;
         }
 
         .nav-number {
@@ -183,11 +188,11 @@
             justify-content: center;
             align-items: center;
             margin-left: 20px;
-            padding-bottom: 8px;
+            font-size: 1.4em;
             transition: 0.1s ease-out;
         }
 
-        .nav-cta:hover .cta-symbol {
+        .nav-cta .nav-link:hover .cta-symbol {
             margin-left: 25px;
             margin-right: -5px;
             transition: 0.1s ease-out;
@@ -216,6 +221,7 @@
 
         .landing-carousel-slide {
             transition: 0.7s ease-out;
+            opacity: 0;
         }
 
         .pull-text-padding {
@@ -244,7 +250,7 @@
         }
 
         .bounce {
-            animation: bounce 10s infinite ease-in-out;
+            animation: bounce 10s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
         }
 
         .o-t-landing .bounce {
@@ -288,14 +294,13 @@
         }
 
         .scroll-btn {
-            font-size: 5em;
+            font-size: 8em;
             width: 130px;
             height: 130px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            padding-bottom: 15px;
             position: absolute;
             bottom: 25px;
             left: 120px;
@@ -308,6 +313,52 @@
         .scroll-btn:hover {
             cursor: pointer;
             bottom: 5px;
+            transition: 0.1s ease-out;
+        }
+
+        .next-slide {
+            font-size: 3em;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 25px);
+            right: 25px;
+            color: var(--highlight-color);
+            border: 1px solid var(--highlight-color);
+            transition: 0.1s ease-out;
+            z-index: 10;
+        }
+
+        .next-slide:hover {
+            cursor: pointer;
+            right: 20px;
+            transition: 0.1s ease-out;
+        }
+
+        .prev-slide {
+            font-size: 3em;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 25px);
+            left: 25px;
+            color: var(--highlight-color);
+            border: 1px solid var(--highlight-color);
+            transition: 0.1s ease-out;
+            z-index: 10;
+        }
+
+        .prev-slide:hover {
+            cursor: pointer;
+            left: 20px;
             transition: 0.1s ease-out;
         }
     </style>
@@ -338,14 +389,14 @@
             <div class="nav-cta cta">
                 <a href="#contact" class="nav-link">
                     <div class="cta-text">Contact</div>
-                    <div class="cta-symbol arrow">→</div>
+                    <div class="cta-symbol arrow">K</div>
                 </a>
             </div>
         </nav>
     </header>
     <main>
         <section class="landing-section">
-            <!-- <div class="o-t-landing landing-carousel-slide">
+            <div class="o-t-landing landing-carousel-slide">
                 <div class="pull-text pull-left">
                     <div class="pull-text-padding"></div>
                     <h1 class="hollow">Optimistic</h1>
@@ -357,7 +408,7 @@
                     <div class="bounce mid"><div class="skew"><img src="https://source.unsplash.com/random/320x760"></div></div>
                     <div class="bounce top"><div class="skew"><img src="https://source.unsplash.com/random/330x640"></div></div>
                 </div>
-            </div> -->
+            </div>
             <div class="c-d-landing landing-carousel-slide">
                 <div class="pull-text pull-left">
                     <div class="pull-text-padding"></div>
@@ -373,7 +424,17 @@
                     </div>
                 </div>
             </div>
-            <div class="scroll-btn arrow">↓</div>
+            <div class="d-e-landing landing-carousel-slide">
+                <div class="pull-text pull-left">
+                    <div class="pull-text-padding"></div>
+                    <h1 class="hollow">Data-driven</h1>
+                    <h1>Engineers</h1>
+                    <p class="stinger-text">We are a full service design and innovation group that cracks tough problems through modern technology for established organizations and startups looking to change the world.</p>
+                </div>
+            </div>
+            <div class="next-slide arrow">K</div>
+            <div class="prev-slide arrow">O</div>
+            <div class="scroll-btn arrow">M</div>
         </section>
     </main>
     <footer>

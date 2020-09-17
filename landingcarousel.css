@@ -1,7 +1,3 @@
-.c-d-landing {
-    opacity: 1;
-}
-
 .card-flex {
     display: flex;
     flex-flow: row wrap;
@@ -21,5 +17,5 @@
 }
 
 .card img {
-    width: 100%;
+    width: 100%
 }

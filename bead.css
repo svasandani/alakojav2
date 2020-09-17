@@ -2,3 +2,39 @@
     left: 0ch;
     width: 11.6ch;
 }
+
+.bead.on-1 {
+    width: calc(228px - 7.25ch);
+}
+
+.bead.click-1 {
+    left: calc(216px);
+    width: 12px;
+}
+
+.bead.on-2 {
+    width: calc(328px - 7.25ch);
+}
+
+.bead.click-2 {
+    left: calc(316px);
+    width: 12px;
+}
+
+.bead.on-3 {
+    width: calc(428px - 7.25ch);
+}
+
+.bead.click-3 {
+    left: calc(416px);
+    width: 12px;
+}
+
+.bead.on-4 {
+    width: calc(528px - 7.25ch);
+}
+
+.bead.click-4 {
+    left: calc(516px);
+    width: 12px;
+}
