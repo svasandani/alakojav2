@@ -22,6 +22,7 @@ function doSlideChange(i, j) {
     slides[j].style.opacity = "1";
 }
 
+/************************************************
 let next = document.querySelector(".landing-section .next-slide");
 let prev = document.querySelector(".landing-section .prev-slide");
 
@@ -43,4 +44,4 @@ prev.addEventListener('click', () => {
     doSlideChange(i, active);
     
     timeout = setTimeout(changeSlide, 10000);
-})
+}) ***************************************************/

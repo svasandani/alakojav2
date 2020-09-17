@@ -25,8 +25,4 @@ navlinks.forEach((nl, i) => {
     nl.addEventListener('mousedown', () => {
         bead.classList.add("click-" + (i + 1));
     })
-
-    nl.addEventListener('mouseup', () => {
-        bead.classList.remove("click-" + (i + 1));
-    })
 })
