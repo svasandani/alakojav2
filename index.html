@@ -16,7 +16,7 @@
             background: var(--bg-color);
             pointer-events: none;
 
-            padding-left: 15vw;
+            padding-left: 10vw;
             padding-top: 40vh;
         }
 
@@ -130,6 +130,7 @@
         p {
             font-size: 1.2em;
             line-height: 1.5em;
+            margin-bottom: 1em;
         }
 
         a {
@@ -147,6 +148,7 @@
             height: 120px;
             padding: 0 50px;
             padding-top: 25px;
+            z-index: 99;
         }
 
         nav {
@@ -409,6 +411,7 @@
     <link href="bead.css" rel="stylesheet">
     <link href="landingcarousel.css" rel="stylesheet">
     <link href="layout.css" rel="stylesheet">
+    <link href="fader.css" rel="stylesheet">
 </head>
 <body>
     <div class="preloader">
@@ -417,8 +420,8 @@
     </div>
     <header>
         <nav>
-            <div class="bead"></div>
-            <span class="logo"><h1>Alakoja</h1></span>
+            <div data-index="-1" class="bead"></div>
+            <a class="logo" href="/"><h1>Alakoja</h1></a>
             <a href="services" class="nav-link">
                 <span class="nav-number">01.</span>
                 <span class="nav-name">Services</span>
@@ -531,6 +534,7 @@
     <footer>
 
     </footer>
+    <svg class="fader"></svg>
 </body>
 <script src="preloader.js"></script>
 <script src="landingcarousel.js"></script>

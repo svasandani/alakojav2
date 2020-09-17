@@ -16,7 +16,7 @@
             background: var(--bg-color);
             pointer-events: none;
 
-            padding-left: 15vw;
+            padding-left: 10vw;
             padding-top: 40vh;
         }
 
@@ -95,6 +95,8 @@
     <link href="../fonts.css" rel="stylesheet">
     <link href="../anim.css" rel="stylesheet">
     <link href="../bead.css" rel="stylesheet">
+    <link href="../fader.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="preloader">
@@ -103,9 +105,9 @@
     </div>
     <header>
         <nav>
-            <div class="bead"></div>
-            <span class="logo"><h1>Alakoja</h1></span>
-            <a href="#services" class="nav-link">
+            <div data-index="1" class="bead"></div>
+            <a class="logo" href="/"><h1>Alakoja</h1></a>
+            <a href="." class="nav-link">
                 <span class="nav-number">01.</span>
                 <span class="nav-name">Services</span>
             </a>
@@ -129,6 +131,87 @@
             </div>
         </nav>
     </header>
+    <main>
+        <section class="landing-section white-line">
+            <div class="pull-text pull-left">
+                <h2 class="smaller">We help you become more you.</h2>
+                <p>When you work with Alakọja, we begin by spending time quality time with you, figuring out who you really are and what you're really about. Then we start building: we come up with a brand strategy that tells your story. We help you shape your product in a way that will make your customers happier and more productive. We build digital experiences that get the word out to the people that are looking for you, whether they know it or not.</p>
+                <p>In short, we help you become more you. And then we help everyone else understand why you're exactly what they're looking for.</p>
+            </div>
+            <div class="pull-right">
+                <div class="landing-img">
+                    <img src="https://source.unsplash.com/random/600x800" />
+                </div>
+            </div>
+        </section>
+        <section class="services-section white-line">
+            <h3>Great! So what do we offer?</h3>
+            <div class="services">
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>Research</h4>
+                    <p>Qualitative and quantitative user research</p>
+                    <p>User journey design</p>
+                    <p>User personas</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>Strategy</h4>
+                    <p>Product strategy</p>
+                    <p>Business strategy</p>
+                    <p>Design systems</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>Product design</h4>
+                    <p>Information architecture</p>
+                    <p>Web, mobile, TV, and watch apps</p>
+                    <p>Flexible displays</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>Visual design</h4>
+                    <p>Data visualization</p>
+                    <p>Communication design</p>
+                    <p>User interface design</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>Full-stack development</h4>
+                    <p>JS, Python, Golang, Rust, Ruby on Rails</p>
+                    <p>Angular, React, Static</p>
+                    <p>Machine learning, AI</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>QA</h4>
+                    <p>Rigorous testing for performance and bugs</p>
+                    <p>User acceptance testing</p>
+                    <p>Unit and system tests</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>Data & Machine Learning</h4>
+                    <p>Machine learning for effective ad conversion</p>
+                    <p>Increase CTR</p>
+                    <p>Highly customizable solutions</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/random/100x100">
+                    <h4>Marketing strategy</h4>
+                    <p>SEO</p>
+                    <p>Multi-variable testing</p>
+                    <p>Brand identity</p>
+                </div>
+            </div>
+        </section>
+        <section class="process-section">
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <svg class="fader"></svg>
 </body>
 <script src="../preloader.js"></script>
 <script src="../bead.js"></script>

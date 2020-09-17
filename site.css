@@ -31,9 +31,25 @@ h2.hollow {
     white-space: nowrap;
 }
 
+h2.smaller {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-family: 'Helvetica Bold';
+    font-size: 2.1em;
+}
+
+h4 {
+    font-family: 'Helvetica Bold';
+    font-size: 1.4em;
+}
+
 p {
     font-size: 1.2em;
     line-height: 1.5em;
+    margin-bottom: 1em;
 }
 
 a {
@@ -51,6 +67,7 @@ header {
     height: 120px;
     padding: 0 50px;
     padding-top: 25px;
+    z-index: 99;
 }
 
 nav {
@@ -137,6 +154,33 @@ nav {
     margin-left: 25px;
     margin-right: -5px;
     transition: 0.1s ease-out;
+}
+
+.landing-section {
+    position: relative;
+    height: 100%;
+}
+
+.pull-text {
+    padding-left: 10%;
+    padding-top: 15vh;
+    overflow-y: hidden;
+}
+
+.pull-left {
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.pull-right {
+    position: absolute; 
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
 }
 
 /* LANDING */

@@ -17,9 +17,18 @@ window.addEventListener('load', onloadfunc);
 function onloadfunc() {
     let preloader = document.querySelector(".preloader");
 
-    let lastEl = els[els.length - 1]
-    
-    preloader.classList.add("loaded");
+    let lastEl = els[els.length - 1];
+
+    const listener = () => {
+        preloader.classList.add("loaded");
+        lastEl.removeEventListener('transitionend', listener);
+    };
+
+    if (lastEl.classList.contains("anim")) {
+        preloader.classList.add("loaded");
+    } else {
+        lastEl.addEventListener('transitionend', listener);
+    }
 
     setTimeout(() => {preloader.classList.add("loaded");}, 5000);
 }

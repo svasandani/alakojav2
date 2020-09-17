@@ -1,0 +1,24 @@
+/* FADER */
+
+.fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background: var(--bg-color);
+    animation-duration: 0.3s;
+    opacity: 0;
+}
+
+.fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+.fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
