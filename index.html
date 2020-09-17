@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alakọja</title>
+
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <link href="fonts.css" rel="stylesheet">
+    <link href="anim.css" rel="stylesheet">
+    <style>
+        /* GLOBAL */
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: black;
+            --bg-color-1: #232323;
+            --text-color: white;
+            --sub-text-color: #878787;
+            --medium-gray: #454545;
+            --highlight-color: #ef5774;
+        }
+
+        html {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Helvetica';
+        }
+
+        h1 {
+            font-family: 'Helvetica Bold';
+            font-size: 8em;
+            margin-bottom: 0.15em;
+            margin-top: -0.25em;
+        }
+
+        h1.hollow {
+            font-family: 'Helvetica Outline';
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .arrow {
+            font-family: sans-serif;
+        }
+
+        /* HEADER */
+        header {
+            width: 100%;
+            height: 120px;
+            padding: 0 50px;
+            padding-top: 25px;
+        }
+
+        nav {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            margin-bottom: 45px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .bead {
+            position: absolute;
+            width: 12px;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--highlight-color);
+            bottom: -3px;
+            left: 7.25ch;
+            transition: 0.13s ease-out;
+        }
+
+        .logo {
+            width: 350px;
+            display: flex;
+            align-self: flex-end;
+            font-size: 2em;
+            font-family: 'Futura';
+            font-weight: bold;
+        }
+
+        .nav-link {
+            width: 130px;
+            padding: 15px;
+            align-self: flex-end;
+            padding-bottom: 0px;
+        }
+
+        .nav-number {
+            display: block;
+            color: var(--sub-text-color);
+        }
+
+        .nav-cta {
+            width: 100%;
+            text-align: right;
+            align-self: flex-end;
+            padding-bottom: 0.25em;
+        }
+
+        .nav-cta .nav-link {
+            display: inline-block;
+            padding: 0;
+            height: 35px;
+        }
+
+        .cta-text {
+            height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cta-symbol {
+            color: var(--text-color);
+            border-radius: 50%;
+            background: var(--medium-gray);
+            padding: 5px;
+            display: inline-flex;
+            width: 35px;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            padding-bottom: 8px;
+            transition: 0.1s ease-out;
+        }
+
+        .nav-cta:hover .cta-symbol {
+            margin-left: 25px;
+            margin-right: -5px;
+            transition: 0.1s ease-out;
+        }
+
+        /* LANDING */
+
+        main {
+            height: calc(100vh - 120px);
+        }
+
+        .landing-section {
+            position: relative;
+            height: 100%;
+        }
+
+        .landing-section::before {
+            content: '';
+            width: calc(100% - 50px);
+            position: absolute;
+            top: 0;
+            left: 50px;
+            height: 2px;
+            background: var(--bg-color-1);
+        }
+
+        .landing-carousel-slide {
+            transition: 0.7s ease-out;
+        }
+
+        .pull-text-padding {
+            height: calc(80vh - 70%);
+        }
+
+        .pull-text {
+            z-index: 5;
+        }
+
+        .landing-carousel-slide .pull-text {
+            overflow: visible;
+            padding-left: 10%;
+        }
+
+        .pull-image {
+            z-index: 4;
+        }
+
+        .o-t-landing .pull-image {
+            overflow: hidden;
+        }
+
+        .skew {
+            transform: rotateX(40deg) rotateY(15deg) rotateZ(-25deg);
+        }
+
+        .bounce {
+            animation: bounce 10s infinite ease-in-out;
+        }
+
+        .o-t-landing .bounce {
+            right: 27%;
+            position: absolute;
+        }
+
+        .o-t-landing .bounce.top {
+            top: 0px;
+            animation-duration: 9s;
+        }
+
+        .o-t-landing .bounce.mid {
+            top: 200px;
+            animation-duration: 8s;
+        }
+
+        .o-t-landing .bounce.bottom {
+            top: 400px;
+            animation-duration: 10s;
+        }
+
+        .pull-left {
+            position: absolute; 
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+        }
+
+        .pull-right {
+            position: absolute; 
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+        }
+
+        .bg-1 {
+            background: var(--bg-color-1);
+        }
+
+        .scroll-btn {
+            font-size: 5em;
+            width: 130px;
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            padding-bottom: 15px;
+            position: absolute;
+            bottom: 25px;
+            left: 120px;
+            color: var(--sub-text-color);
+            border: 1px solid var(--sub-text-color);
+            transition: 0.1s ease-out;
+            z-index: 10;
+        }
+
+        .scroll-btn:hover {
+            cursor: pointer;
+            bottom: 5px;
+            transition: 0.1s ease-out;
+        }
+    </style>
+    <link href="bead.css" rel="stylesheet">
+    <link href="landingcarousel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="bead"></div>
+            <span class="logo">Alakoja</span>
+            <a href="#services" class="nav-link">
+                <span class="nav-number">01.</span>
+                <span class="nav-name">Services</span>
+            </a>
+            <a href="#work" class="nav-link">
+                <span class="nav-number">02.</span>
+                <span class="nav-name">Work</span>
+            </a>
+            <a href="#company" class="nav-link">
+                <span class="nav-number">03.</span>
+                <span class="nav-name">Company</span>
+            </a>
+            <a href="#careers" class="nav-link">
+                <span class="nav-number">04.</span>
+                <span class="nav-name">Careers</span>
+            </a>
+            <div class="nav-cta cta">
+                <a href="#contact" class="nav-link">
+                    <div class="cta-text">Contact</div>
+                    <div class="cta-symbol arrow">→</div>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="landing-section">
+            <!-- <div class="o-t-landing landing-carousel-slide">
+                <div class="pull-text pull-left">
+                    <div class="pull-text-padding"></div>
+                    <h1 class="hollow">Optimistic</h1>
+                    <h1>Technologists</h1>
+                    <p class="stinger-text">We are a full service design and innovation group that cracks tough problems through modern technology for established organizations and startups looking to change the world.</p>
+                </div>
+                <div class="pull-image pull-right bg-1">
+                    <div class="bounce bottom"><div class="skew"><img src="https://source.unsplash.com/random/320x640"></div></div>
+                    <div class="bounce mid"><div class="skew"><img src="https://source.unsplash.com/random/320x760"></div></div>
+                    <div class="bounce top"><div class="skew"><img src="https://source.unsplash.com/random/330x640"></div></div>
+                </div>
+            </div> -->
+            <div class="c-d-landing landing-carousel-slide">
+                <div class="pull-text pull-left">
+                    <div class="pull-text-padding"></div>
+                    <h1 class="hollow">Creative</h1>
+                    <h1>Designers</h1>
+                    <p class="stinger-text">We are a full service design and innovation group that cracks tough problems through modern technology for established organizations and startups looking to change the world.</p>
+                </div>
+                <div class="pull-image pull-right">
+                    <div class="card-flex">
+                        <div class="card"><img src="https://source.unsplash.com/random/320x640"></div>
+                        <div class="card"><img src="https://source.unsplash.com/random/320x760"></div>
+                        <div class="card"><img src="https://source.unsplash.com/random/800x600"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-btn arrow">↓</div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="landingcarousel.js"></script>
+<script src="bead.js"></script>
+</html>

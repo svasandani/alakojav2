@@ -1,0 +1,25 @@
+.c-d-landing {
+    opacity: 1;
+}
+
+.card-flex {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+}
+
+.card {
+    margin: 25px;
+    height: 60%;
+    width: calc(50% - 50px);
+    flex-grow: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    animation: fade-in 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.card img {
+    width: 100%;
+}
