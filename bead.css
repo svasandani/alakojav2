@@ -4,37 +4,37 @@
 }
 
 .bead.on-1 {
-    width: calc(228px - 7.25ch);
+    left: calc(216px);
+    /* width: calc(228px - 7.25ch); */
 }
 
 .bead.click-1 {
-    left: calc(216px);
-    width: 12px;
+    width: 6.7ch;
 }
 
 .bead.on-2 {
-    width: calc(328px - 7.25ch);
+    left: calc(316px);
+    /* width: calc(328px - 7.25ch); */
 }
 
 .bead.click-2 {
-    left: calc(316px);
-    width: 12px;
+    width: 4.1ch;
 }
 
 .bead.on-3 {
-    width: calc(428px - 7.25ch);
+    left: calc(416px);
+    /* width: calc(428px - 7.25ch); */
 }
 
 .bead.click-3 {
-    left: calc(416px);
-    width: 12px;
+    width: 7.7ch;
 }
 
 .bead.on-4 {
-    width: calc(528px - 7.25ch);
+    left: calc(516px);
+    /* width: calc(528px - 7.25ch); */
 }
 
 .bead.click-4 {
-    left: calc(516px);
-    width: 12px;
+    width: 6.3ch;
 }
