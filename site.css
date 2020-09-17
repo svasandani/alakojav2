@@ -1,0 +1,158 @@
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: black;
+    --bg-color-1: #232323;
+    --text-color: white;
+    --sub-text-color: #878787;
+    --medium-gray: #454545;
+    --highlight-color: #ef5774;
+}
+
+html {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Helvetica';
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-family: 'Helvetica Bold';
+    font-size: 8em;
+    margin-bottom: 0.15em;
+    margin-top: -0.25em;
+}
+
+h2.hollow {
+    font-family: 'Helvetica Outline';
+    white-space: nowrap;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.arrow {
+    font-family: 'Arrows';
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 120px;
+    padding: 0 50px;
+    padding-top: 25px;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 45px;
+    display: grid;
+    grid-template-columns: 200px 100px 100px 100px 100px 1fr;
+}
+
+.bead {
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--highlight-color);
+    bottom: -3px;
+    left: 7.25ch;
+    transition: 0.13s ease-out;
+}
+
+.logo {
+    width: 350px;
+    display: flex;
+    align-self: flex-end;
+    font-size: 2em;
+    font-family: 'Futura';
+    font-weight: bold;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.nav-link {
+    width: 130px;
+    padding: 15px;
+    align-self: flex-end;
+    padding-bottom: 2px;
+}
+
+.nav-number {
+    display: block;
+    color: var(--sub-text-color);
+}
+
+.nav-cta {
+    width: 100%;
+    text-align: right;
+    align-self: flex-end;
+    padding-bottom: 0.25em;
+}
+
+.nav-cta .nav-link {
+    display: inline-block;
+    padding: 0;
+    height: 35px;
+}
+
+.cta-text {
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-symbol {
+    color: var(--text-color);
+    border-radius: 50%;
+    background: var(--medium-gray);
+    padding: 5px;
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 1.4em;
+    transition: 0.1s ease-out;
+}
+
+.nav-cta .nav-link:hover .cta-symbol {
+    margin-left: 25px;
+    margin-right: -5px;
+    transition: 0.1s ease-out;
+}
+
+/* LANDING */
+
+main {
+    height: calc(100vh - 120px);
+}
+
+.skew {
+    transform: rotateX(40deg) rotateY(15deg) rotateZ(-25deg);
+}
+
+.bounce {
+    animation: bounce 10s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950);
+}
+
+.bg-1 {
+    background: var(--bg-color-1);
+}

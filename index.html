@@ -6,6 +6,42 @@
     <title>Alakọja</title>
 
     <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: 100;
+            background: var(--bg-color);
+            pointer-events: none;
+
+            padding-left: 15vw;
+            padding-top: 40vh;
+        }
+
+        .preloader.loaded {
+            top: -100vh;
+            transition: 0.6s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+        }
+
+        .preloader * {
+            margin-left: -25px;
+            opacity: 0;
+        }
+
+        .preloader .anim {
+            margin-left: 0px;
+            opacity: 1;
+            transition: 0.3s ease-out;
+        }
+
+        .preloader-text {
+            font-family: 'Helvetica Light';
+            font-size: 4em;
+        }
+    </style>
+    <style>
         /* http://meyerweb.com/eric/tools/css/reset/ 
         v2.0 | 20110126
         License: none (public domain)
@@ -240,6 +276,7 @@
 
         .pull-image {
             z-index: 4;
+            transition: 0.3s ease-out;
         }
 
         .o-t-landing .pull-image {
@@ -374,11 +411,15 @@
     <link href="layout.css" rel="stylesheet">
 </head>
 <body>
+    <div class="preloader">
+        <span class="preloader-text">Loading...</span>
+        <p>We'll be with you in a second.</p>
+    </div>
     <header>
         <nav>
             <div class="bead"></div>
             <span class="logo"><h1>Alakoja</h1></span>
-            <a href="#services" class="nav-link">
+            <a href="services" class="nav-link">
                 <span class="nav-number">01.</span>
                 <span class="nav-name">Services</span>
             </a>
@@ -454,17 +495,17 @@
                 <div class="project">
                     <div class="card float-up"><img src="https://source.unsplash.com/random/325x760"></div>
                     <h3 class="float-up">Squarespace</h3>
-                    <p class="float-up">Introduction about the project.</p>
+                    <p class="float-up">Using readable metrics to make informed decisions.</p>
                 </div>
                 <div class="project">
                     <div class="card float-up"><img src="https://source.unsplash.com/random/320x765"></div>
                     <h3 class="float-up">Bloomberg</h3>
-                    <p class="float-up">Introduction about the project.</p>
+                    <p class="float-up">Creating a consistent and memorable web identity.</p>
                 </div>
                 <div class="project">
                     <div class="card float-up"><img src="https://source.unsplash.com/random/325x765"></div>
                     <h3 class="float-up">AT&amp;T</h3>
-                    <p class="float-up">Introduction about the project.</p>
+                    <p class="float-up">Sending a powerful message and building customer trust.</p>
                 </div>
             </div>
         </section>
@@ -491,6 +532,7 @@
 
     </footer>
 </body>
+<script src="preloader.js"></script>
 <script src="landingcarousel.js"></script>
 <script src="bead.js"></script>
 <script src="floatup.js"></script>
