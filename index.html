@@ -306,9 +306,15 @@
             bottom: 25px;
             left: 120px;
             color: var(--sub-text-color);
+            fill: var(--sub-text-color);
             border: 1px solid var(--sub-text-color);
             transition: 0.1s ease-out;
             z-index: 10;
+            text-align: center;
+        }
+
+        .scroll-btn svg {
+            transform: scale(2.6);
         }
 
         .scroll-btn:hover {
@@ -436,42 +442,44 @@
             </div>
             <!-- <div class="next-slide arrow">K</div>
             <div class="prev-slide arrow">O</div> -->
-            <div class="scroll-btn arrow">M</div>
+            <a class="scroll-btn arrow" href="#scroll-target">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+            </a>
         </section>
-        <section class="featured-section">
-            <h2 class="hollow">Featured</h2><h2>Projects</h2>
+        <section class="featured-section" id="scroll-target">
+            <h2 class="hollow float-up">Featured</h2><h2 class="float-up">Projects</h2>
             <div class="projects">
                 <div class="project">
-                    <div class="card"><img src="https://source.unsplash.com/random/325x760"></div>
-                    <h3>Squarespace</h3>
-                    <p>Introduction about the project.</p>
+                    <div class="card float-up"><img src="https://source.unsplash.com/random/325x760"></div>
+                    <h3 class="float-up">Squarespace</h3>
+                    <p class="float-up">Introduction about the project.</p>
                 </div>
                 <div class="project">
-                    <div class="card"><img src="https://source.unsplash.com/random/320x765"></div>
-                    <h3>Bloomberg</h3>
-                    <p>Introduction about the project.</p>
+                    <div class="card float-up"><img src="https://source.unsplash.com/random/320x765"></div>
+                    <h3 class="float-up">Bloomberg</h3>
+                    <p class="float-up">Introduction about the project.</p>
                 </div>
                 <div class="project">
-                    <div class="card"><img src="https://source.unsplash.com/random/325x765"></div>
-                    <h3>AT&amp;T</h3>
-                    <p>Introduction about the project.</p>
+                    <div class="card float-up"><img src="https://source.unsplash.com/random/325x765"></div>
+                    <h3 class="float-up">AT&amp;T</h3>
+                    <p class="float-up">Introduction about the project.</p>
                 </div>
             </div>
         </section>
         <section class="contact-section">
             <div class="quote">
-                <span class="quotation">"Some client quote goes here"</span>
-                <span class="attribution">Henry Ford</span>
+                <span class="quotation float-up">"Some client quote goes here"</span>
+                <span class="attribution float-up">Henry Ford</span>
             </div>
             <div class="contact-form">
-                <div class="aside"><h3>Want to learn more?</h3></div>
+                <div class="aside float-up"><h3>Want to learn more?</h3></div>
                 <div class="center">
                     <form id="contact">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" required>
-                        <label for="message">Message</label>
-                        <input type="text" name="message" required>
-                        <button type="submit" name="submit">SEND</button>
+                        <label for="email" class="float-up">Email</label>
+                        <input type="email" name="email" class="float-up" required>
+                        <label for="message" class="float-up">Message</label>
+                        <input type="text" name="message" class="float-up" required>
+                        <button type="submit" name="submit" class="float-up">SEND</button>
                     </form>
                 </div>
             </div>
@@ -483,4 +491,5 @@
 </body>
 <script src="landingcarousel.js"></script>
 <script src="bead.js"></script>
+<script src="floatup.js"></script>
 </html>
