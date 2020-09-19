@@ -41,3 +41,29 @@
     font-size: 1rem;
     margin-bottom: 0.17em;
 }
+
+/* process */
+
+.process {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 10em;
+    height: 20em;
+}
+
+.number-container {
+    font-size: 20em;
+    line-height: 0.55;
+    position: relative;
+    font-family: 'Helvetica Light';
+}
+
+.number-container::after {
+    content: '';
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 9px;
+    background: var(--text-color);
+}
