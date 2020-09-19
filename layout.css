@@ -17,6 +17,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 35px;
+    min-height: 800px;
 }
 
 .projects .card {
