@@ -88,6 +88,7 @@ nav {
     bottom: -3px;
     left: 7.25ch;
     transition: 0.13s ease-out;
+    pointer-events: none;
 }
 
 .logo {

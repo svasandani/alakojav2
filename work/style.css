@@ -1,43 +1,27 @@
-.landing-img {
-    width: 85%;
-    margin-left: 15%;
-    height: 100%;
-}
-
-.landing-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.services-section, .process-section {
+.clients-section {
     padding-top: 5vh;
     padding-left: 5vw;
     padding-bottom: 15vh;
 }
 
-.services {
+.clients {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 10vh;
     grid-gap: 60px;
 }
 
-.service {
+.client {
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 5vh;
 }
 
-.service img {
-    margin-bottom: 1.2em;
-}
-
-.service h4 {
+.client h4 {
     margin-bottom: 0.6em;
 }
 
-.service p {
+.client p {
     font-size: 1rem;
     margin-bottom: 0.17em;
 }
