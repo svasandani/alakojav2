@@ -55,7 +55,9 @@
     font-size: 20em;
     line-height: 0.55;
     position: relative;
-    font-family: 'Helvetica Light';
+    /* font-family: 'Helvetica Light'; */
+    font-family: 'Inter';
+    font-weight: 100;
 }
 
 .number-container::after {

@@ -15,19 +15,30 @@
 html {
     background: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Helvetica';
+    /* font-family: 'Helvetica'; */
+    font-family: 'Inter';
+    font-weight: 300;
     scroll-behavior: smooth;
 }
 
 h2 {
-    font-family: 'Helvetica Bold';
+    /* font-family: 'Helvetica Bold'; */
+    font-family: 'Inter';
+    font-weight: 500;
     font-size: 8em;
     margin-bottom: 0.15em;
     margin-top: -0.25em;
 }
 
 h2.hollow {
-    font-family: 'Helvetica Outline';
+    /* font-family: 'Helvetica Outline'; */
+    font-family: 'Inter';
+    font-weight: 500;
+    color: var(--bg-color);
+    text-shadow: -1px 1px 0 var(--text-color),
+                1px 1px 0 var(--text-color),
+                1px -1px 0 var(--text-color),
+                -1px -1px 0 var(--text-color);
     white-space: nowrap;
 }
 
@@ -37,12 +48,16 @@ h2.smaller {
 }
 
 h3 {
-    font-family: 'Helvetica Bold';
+    /* font-family: 'Helvetica Bold'; */
+    font-family: 'Inter';
+    font-weight: 500;
     font-size: 2.6em;
 }
 
 h4 {
-    font-family: 'Helvetica Bold';
+    /* font-family: 'Helvetica Bold'; */
+    font-family: 'Inter';
+    font-weight: 500;
     font-size: 1.4em;
 }
 
