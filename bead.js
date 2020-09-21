@@ -7,7 +7,9 @@ let navlinks = document.querySelectorAll(".nav-link");
 let baseIndex = bead.getAttribute("data-index");
 
 let hover = baseIndex;
-let click = -1;
+let click = true;
+let navaway = false;
+let ready = false;
 
 doBead();
 
@@ -21,41 +23,63 @@ function doBead() {
         bead.classList.add("on-" + hover);
     }
 
-    if (bead.classList.contains("click-0")) { bead.classList.remove("click-0"); }
-    navlinks.forEach((nl, i) => {
-        if (bead.classList.contains("click-" + (i + 1))) { bead.classList.remove("click-" + (i + 1)); }
-    })
+    if (bead.classList.contains("click")) { bead.classList.remove("click"); }
 
-    if (click >= 0) {
-        bead.classList.add("click-" + click);
+    if (click) {
+        bead.classList.add("click");
     } 
+
+    setTimeout(() => { bead.setAttribute("style", "transition: 0.13s ease-out;"); ready = true; }, 500);
 }
 
 logo.addEventListener('mouseover', () => {
+    if (navaway || !ready) return;
     hover = 0;
+    click = false;
     doBead();
 });
 
 logo.addEventListener('mouseout', () => {
+    if (navaway || !ready) return;
     hover = baseIndex;
-    click = -1;
+    click = true;
+    doBead();
+})
+
+logo.addEventListener('mousedown', () => {
+    click = true;
+    doBead();
+})
+
+logo.addEventListener('mouseup', () => {
+    navaway = true;
+    click = true;
     doBead();
 })
 
 navlinks.forEach((nl, i) => {
     nl.addEventListener('mouseover', () => {
+        if (navaway || !ready) return;
         hover = i + 1;
+        click = false;
         doBead();
     })
     
     nl.addEventListener('mouseout', () => {
+        if (navaway || !ready) return;
         hover = baseIndex;
-        click = -1;
+        click = true;
         doBead();
     })
 
     nl.addEventListener('mousedown', () => {
-        click = i + 1;
+        click = true;
+        doBead();
+    })
+
+    nl.addEventListener('mouseup', () => {
+        navaway = true;
+        click = true;
         doBead();
     })
 })

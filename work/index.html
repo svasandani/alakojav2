@@ -5,94 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work — Alakọja</title>
 
-    <style>
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            z-index: 100;
-            background: var(--bg-color);
-            pointer-events: none;
-
-            padding-left: 5vw;
-            padding-top: 40vh;
-        }
-
-        .preloader.loaded {
-            top: -100vh;
-            transition: 0.6s cubic-bezier(0.075, 0.820, 0.165, 1.000);
-        }
-
-        .preloader * {
-            margin-left: -25px;
-            opacity: 0;
-        }
-
-        .preloader .anim {
-            margin-left: 0px;
-            opacity: 1;
-            transition: 0.3s ease-out;
-        }
-
-        .preloader-text {
-            /* font-family: 'Helvetica Light'; */
-            font-family: 'Inter';
-            font-weight: 100;
-            font-size: 4em;
-        }
-    </style>
-    <style>
-        /* http://meyerweb.com/eric/tools/css/reset/ 
-        v2.0 | 20110126
-        License: none (public domain)
-        */
-
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed, 
-        figure, figcaption, footer, header, hgroup, 
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
-        /* HTML5 display-role reset for older browsers */
-        article, aside, details, figcaption, figure, 
-        footer, header, hgroup, menu, nav, section {
-            display: block;
-        }
-        body {
-            line-height: 1;
-        }
-        ol, ul {
-            list-style: none;
-        }
-        blockquote, q {
-            quotes: none;
-        }
-        blockquote:before, blockquote:after,
-        q:before, q:after {
-            content: '';
-            content: none;
-        }
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-    </style>
+    <link href="../preloader.css" rel="stylesheet">
+    <link href="../reset.css" rel="stylesheet">
     <link href="../layout.css" rel="stylesheet">
     <link href="../site.css" rel="stylesheet">
     <link href="../fonts.css" rel="stylesheet">
@@ -109,7 +23,7 @@
     </div>
     <header>
         <nav>
-            <div data-index="2" class="bead"></div>
+            <div data-index="2" class="bead click on-2"></div>
             <a class="logo" href="/"><h1>Alakoja</h1></a>
             <a href="../services" class="nav-link">
                 <span class="nav-number">01.</span>

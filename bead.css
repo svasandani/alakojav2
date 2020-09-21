@@ -1,40 +1,32 @@
+.bead.click {
+    width: 12px !important;
+}
+
 .bead.on-0 {
     left: 0ch;
-    width: 11.6ch;
+    width: 10.8ch;
+}
+
+.bead.on-0.click {
+    left: 6.6ch;
 }
 
 .bead.on-1 {
     left: calc(216px);
-    /* width: calc(228px - 7.25ch); */
-}
-
-.bead.click-1 {
-    width: 6.7ch;
+    width: 6.6ch;
 }
 
 .bead.on-2 {
     left: calc(316px);
-    /* width: calc(328px - 7.25ch); */
-}
-
-.bead.click-2 {
-    width: 4.1ch;
+    width: 3.9ch;
 }
 
 .bead.on-3 {
     left: calc(416px);
-    /* width: calc(428px - 7.25ch); */
-}
-
-.bead.click-3 {
-    width: 7.7ch;
+    width: 7.2ch;
 }
 
 .bead.on-4 {
     left: calc(516px);
-    /* width: calc(528px - 7.25ch); */
-}
-
-.bead.click-4 {
-    width: 6.3ch;
+    width: 5.9ch;
 }
