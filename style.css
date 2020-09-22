@@ -58,6 +58,7 @@ header {
     position: fixed;
     top: 0px;
     background: var(--bg-color);
+    padding-bottom: 115px;
 }
 
 nav {
