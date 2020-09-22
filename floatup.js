@@ -2,6 +2,8 @@ var scroll = window.requestAnimationFrame || function(callback){ window.setTimeo
 
 let floatUp = Array.from(document.querySelectorAll(".float-up"));
 
+let haswork = true;
+
 function loop() {
 
     floatUp.forEach((el) => {
@@ -10,6 +12,15 @@ function loop() {
             floatUp = floatUp.filter((e) => (e != el));
         }
     })
+
+    if (haswork) {
+      try {
+        doWork();
+      } catch(e) {
+        console.log(e);
+        haswork = false;
+      }
+    }
 
     scroll(loop);
 }

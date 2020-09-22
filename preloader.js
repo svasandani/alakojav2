@@ -1,3 +1,5 @@
+window.scrollTo(0, 0);
+
 let els = document.querySelectorAll(".preloader *");
 
 document.body.style.overflow = "hidden";
@@ -16,21 +18,21 @@ recursiveFadeIn(els, 0, 200);
 
 window.addEventListener('load', onloadfunc);
 
-function onloadfunc() {
-    window.scrollTo(0, 0);
-    
+function onloadfunc() {   
     let preloader = document.querySelector(".preloader");
 
     let lastEl = els[els.length - 1];
 
     const listener = () => {
         preloader.classList.add("loaded");
+        document.documentElement.setAttribute("style", "scroll-behavior: smooth;");
         document.body.style.overflow = "auto";
         lastEl.removeEventListener('transitionend', listener);
     };
 
     if (lastEl.classList.contains("anim")) {
         preloader.classList.add("loaded");
+        document.documentElement.setAttribute("style", "scroll-behavior: smooth;");
         document.body.style.overflow = "auto";
     } else {
         lastEl.addEventListener('transitionend', listener);
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     links.forEach((link) => {
         if (link.hostname !== window.location.hostname || link.pathname === window.location.pathname) return;
-        link.addEventListener('click', (e) => { window.scrollTo(0, 0); setTimeout(() => { addFadeOut(fader,link,e); }, 500); });
+        link.addEventListener('click', (e) => { document.documentElement.setAttribute("style", "scroll-behavior: auto;"); setTimeout(() => { window.scrollTo(0, 0); }, 100); addFadeOut(fader,link,e); });
     });
 });
 
