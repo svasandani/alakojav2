@@ -28,6 +28,12 @@ section {
     padding: 120px 5vw;
 }
 
+@media (max-width: 1000px) {
+    section {
+        padding: 85px 50px;
+    }
+}
+
 .featured-section {
     padding-top: 200px;
 }
@@ -109,6 +115,28 @@ section {
     background: var(--text-color);
 }
 
+@media (max-width: 1000px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project .card {
+        height: 450px;
+    }
+
+    .project:hover .card {
+        margin: 0px;
+        margin-bottom: 25px;
+        width: 100%;
+        height: 450px;
+        transition: 0.4s ease-out;
+    }
+
+    .project:hover h3 {
+        margin-top: 0px;
+    }
+}
+
 /* contact */
 
 .quote {
@@ -180,4 +208,27 @@ button:hover {
     color: var(--bg-color);
     transition: 0.1s linear;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .quote {
+        margin-left: 0px;
+        margin-bottom: 170px;
+    }
+
+    .quotation {
+        font-size: 3em;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .aside {
+        margin-bottom: 2rem;
+    }
+
+    form#contact {
+        width: 100%;
+    }
 }

@@ -4,8 +4,8 @@
     position: fixed;
     top: 120px;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 999999;
     pointer-events: none;
     background: var(--bg-color);
@@ -33,4 +33,10 @@
     opacity: 1;
     transform: translateY(0px);
     transition: 0.2s linear;
+}
+
+@media (max-width: 1000px) {
+    .fader {
+        top: 0px;
+    }
 }

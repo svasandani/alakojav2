@@ -7,6 +7,15 @@
     animation-fill-mode: forwards;
 }
 
+@media (max-width: 1000px) {
+    .c-d-landing .card {
+        width: 100%;
+        height: calc(33vh - 103px);
+        margin: 0;
+        margin-bottom: 25px;
+    }
+}
+
 .push-left {
     margin-left: -25px;
     opacity: 0;

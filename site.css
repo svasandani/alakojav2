@@ -19,6 +19,11 @@ html {
     font-family: 'Inter';
     font-weight: 300;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 h2 {
@@ -78,7 +83,7 @@ a {
 
 /* HEADER */
 header {
-    width: 100%;
+    width: 100vw;
     height: 120px;
     padding: 0 50px;
     padding-top: 25px;
@@ -96,6 +101,10 @@ nav {
     margin-bottom: 45px;
     display: grid;
     grid-template-columns: 200px 100px 100px 100px 100px 1fr;
+}
+
+.flyout-button {
+    display: none;
 }
 
 .bead {
@@ -175,7 +184,7 @@ nav {
 
 .landing-section {
     position: relative;
-    height: 100%;
+    height: calc(100vh - 100px);
 }
 
 .pull-text {
@@ -200,11 +209,102 @@ nav {
     height: 100%;
 }
 
+@media (max-width: 1000px) {
+    h2 {
+        font-size: 3em;
+    }
+
+    h2.smaller {
+        font-size: 2em;
+    }
+
+    h2.hollow {
+        color: var(--text-color);
+        text-shadow: none;
+    }
+
+    header {
+        width: 100vw;
+        height: 85px;
+        padding: 25px 50px;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        background: var(--bg-color);
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100vw;
+        padding-left: 50px;
+        padding-top: 25px;
+        height: 85px;
+        transition: 0.3s ease-out;
+    }
+
+    .flyout-button {
+        font-size: 2rem;
+        display: block;
+        color: var(--text-color);
+        position: absolute;
+        right: 50px;
+    }
+
+    nav.flyout {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 50%;
+        margin-bottom: 100px;
+        align-self: flex-start;
+    }
+
+    .nav-link {
+        padding-left: 0px;
+        padding-top: 25px;
+        align-self: flex-start;
+    }
+
+    .nav-cta {
+        padding-top: 25px;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .pull-text-padding {
+        display: none;
+    }
+
+    .pull-left {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        padding: 0;
+    }
+    
+    .pull-right {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        padding: 0;
+    }
+}
+
 /* LANDING */
 
 main {
-    height: calc(100vh - 120px);
+    min-height: 100vh;
     margin-top: 120px;
+}
+
+@media (max-width: 1000px) {
+    main {
+        margin-top: 85px;
+    }
 }
 
 .skew {

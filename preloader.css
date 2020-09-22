@@ -34,3 +34,11 @@
     font-weight: 100;
     font-size: 4em;
 }
+
+@media (max-width: 1000px) {
+    .preloader {
+        top: 0px;
+        padding-left: 50px;
+        padding-top: 40vh;
+    }
+}

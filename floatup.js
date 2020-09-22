@@ -4,6 +4,9 @@ let floatUp = Array.from(document.querySelectorAll(".float-up"));
 
 let haswork = true;
 
+let nav = document.querySelector("nav");
+let prev = 0;
+
 function loop() {
 
     floatUp.forEach((el) => {
@@ -20,6 +23,16 @@ function loop() {
         console.log(e);
         haswork = false;
       }
+    }
+
+    if (screen.width < 1000) {
+      let current = window.pageYOffset;
+
+      if (current != prev) {
+        if (nav.classList.contains("flyout")) { nav.classList.remove("flyout"); }
+      }
+
+      prev = current;
     }
 
     scroll(loop);

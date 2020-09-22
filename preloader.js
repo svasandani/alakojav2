@@ -1,6 +1,6 @@
 let els = document.querySelectorAll(".preloader *");
 
-document.body.style.overflow = "hidden";
+document.body.style.overflowY = "hidden";
 
 function recursiveFadeIn(els, i, time) {
     if (i == els.length) return;
@@ -23,18 +23,18 @@ function onloadfunc() {
 
     const listener = () => {
         preloader.classList.add("loaded");
-        document.body.style.overflow = "auto";
+        document.body.style.overflowY = "auto";
         lastEl.removeEventListener('transitionend', listener);
     };
 
     if (lastEl.classList.contains("anim")) {
         preloader.classList.add("loaded");
-        document.body.style.overflow = "auto";
+        document.body.style.overflowY = "auto";
     } else {
         lastEl.addEventListener('transitionend', listener);
     }
 
-    setTimeout(() => {preloader.classList.add("loaded"); document.body.style.overflow = "auto";}, 5000);
+    setTimeout(() => {preloader.classList.add("loaded"); document.body.style.overflowY = "auto";}, 5000);
 }
 
 // fade out on link click

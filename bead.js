@@ -1,3 +1,5 @@
+if (window.screen.width >= 1000) {
+
 let bead = document.querySelector(".bead");
 
 let logo = document.querySelector(".logo");
@@ -82,4 +84,20 @@ navlinks.forEach((nl, i) => {
         click = true;
         doBead();
     })
-})
+});
+
+} else {
+    let flyout = document.querySelector(".flyout-button");
+
+    let nav = document.querySelector("nav");
+
+    const toggleFlyout = () => {
+        if (nav.classList.contains("flyout")) {
+            nav.classList.remove("flyout");
+        } else {
+            nav.classList.add("flyout");
+        }
+    };
+
+    flyout.addEventListener('click', toggleFlyout);
+}
