@@ -9,3 +9,12 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
+
+@media (max-width: 1000px) {
+    .left-grid, .right-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        margin-bottom: 85px;
+        grid-gap: 25px;
+    }
+}

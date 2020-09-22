@@ -24,6 +24,7 @@ h3 {
 }
 
 section {
+    height: auto;
     position: relative;
     padding: 120px 5vw;
 }

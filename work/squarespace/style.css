@@ -22,3 +22,22 @@
 .about-squarespace-homepage-img {
     height: 650px;
 }
+
+@media (max-width: 1000px) {
+    .figure-quote {
+        height: auto;
+    }
+
+    .figure-img, .graph {
+        height: 250px;
+    }
+
+    .quote {
+        margin-bottom: 0px;
+    }
+    
+    .about-squarespace-homepage {
+        margin-top: 85px;
+        height: auto;
+    }
+}
