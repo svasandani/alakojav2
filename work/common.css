@@ -1,0 +1,11 @@
+.left-grid {
+    grid-gap: 10%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.right-grid {
+    grid-gap: 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}

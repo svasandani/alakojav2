@@ -1,8 +1,24 @@
-.anim {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+.figure-quote {
+    margin-top: 10vh;
+    height: 250px;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
 }
 
 .quote {
-    margin-left: 10%;
+    margin-left: 0%;
+}
+
+.about-squarespace-homepage {
+    margin-top: 10vh;
+    height: 650px;
+}
+
+.about-squarespace-homepage-img {
+    height: 650px;
 }
