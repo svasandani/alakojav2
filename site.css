@@ -18,6 +18,7 @@ html {
     /* font-family: 'Helvetica'; */
     font-family: 'Inter';
     font-weight: 300;
+    scroll-behavior: smooth;
 }
 
 h2 {
@@ -82,6 +83,9 @@ header {
     padding: 0 50px;
     padding-top: 25px;
     z-index: 99;
+    position: fixed;
+    top: 0px;
+    background: var(--bg-color);
 }
 
 nav {
@@ -199,6 +203,7 @@ nav {
 
 main {
     height: calc(100vh - 120px);
+    margin-top: 120px;
 }
 
 .skew {

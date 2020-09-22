@@ -1,5 +1,3 @@
-window.scrollTo(0, 0);
-
 let els = document.querySelectorAll(".preloader *");
 
 document.body.style.overflow = "hidden";
@@ -25,14 +23,12 @@ function onloadfunc() {
 
     const listener = () => {
         preloader.classList.add("loaded");
-        document.documentElement.setAttribute("style", "scroll-behavior: smooth;");
         document.body.style.overflow = "auto";
         lastEl.removeEventListener('transitionend', listener);
     };
 
     if (lastEl.classList.contains("anim")) {
         preloader.classList.add("loaded");
-        document.documentElement.setAttribute("style", "scroll-behavior: smooth;");
         document.body.style.overflow = "auto";
     } else {
         lastEl.addEventListener('transitionend', listener);
@@ -50,7 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     links.forEach((link) => {
         if (link.hostname !== window.location.hostname || link.pathname === window.location.pathname) return;
-        link.addEventListener('click', (e) => { document.documentElement.setAttribute("style", "scroll-behavior: auto;"); setTimeout(() => { window.scrollTo(0, 0); }, 100); addFadeOut(fader,link,e); });
+        link.addEventListener('click', (e) => {
+            if (link.hasAttribute("data-bead")) {
+                let navlinks = document.querySelectorAll(".nav-link");
+                let bead = document.querySelector(".bead");
+
+                if (bead.classList.contains("on-0")) { bead.classList.remove("on-0"); }
+
+                navlinks.forEach((nl, i) => {
+                    if (bead.classList.contains("on-" + (i + 1))) { bead.classList.remove("on-" + (i + 1)); }
+                })
+                
+                bead.classList.add("click", "on-" + link.getAttribute("data-bead"));
+            }
+            addFadeOut(fader,link,e); 
+        });
     });
 });
 
