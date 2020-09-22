@@ -28,3 +28,35 @@
         opacity: 0;
     }
 }
+
+@keyframes bar {
+    0% {
+        left: 110%;
+    }
+
+    100% {
+        left: -10%;
+    }
+}
+
+@keyframes graph-1 {
+    0% {
+        bottom: 84%;
+    }
+
+    13% {
+        bottom: 35%;
+    }
+
+    45% {
+        bottom: 67%;
+    }
+
+    73% {
+        bottom: 75%;
+    }
+
+    100% {
+        bottom: 84%;
+    }
+}

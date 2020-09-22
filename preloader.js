@@ -17,6 +17,8 @@ recursiveFadeIn(els, 0, 200);
 window.addEventListener('load', onloadfunc);
 
 function onloadfunc() {
+    window.scrollTo(0, 0);
+    
     let preloader = document.querySelector(".preloader");
 
     let lastEl = els[els.length - 1];
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     links.forEach((link) => {
         if (link.hostname !== window.location.hostname || link.pathname === window.location.pathname) return;
-        link.addEventListener('click', (e) => { addFadeOut(fader,link,e); });
+        link.addEventListener('click', (e) => { window.scrollTo(0, 0); setTimeout(() => { addFadeOut(fader,link,e); }, 500); });
     });
 });
 
