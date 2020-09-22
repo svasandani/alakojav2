@@ -184,7 +184,7 @@ nav {
 
 .landing-section {
     position: relative;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
 }
 
 .pull-text {
@@ -215,7 +215,7 @@ nav {
     }
 
     h2.smaller {
-        font-size: 2em;
+        font-size: 4em;
     }
 
     h2.hollow {

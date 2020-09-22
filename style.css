@@ -34,10 +34,6 @@
 }
 
 @media (max-width: 1000px) {
-    .landing-section {
-        min-height: 100%;
-    }
-
     .pull-left {
         width: calc(100% - 100px);
         height: 40vh;

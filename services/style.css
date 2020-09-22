@@ -68,3 +68,54 @@
     height: 9px;
     background: var(--text-color);
 }
+
+@media (max-width: 1000px) {
+    .pull-left {
+        position: relative;
+        padding-top: 15px;
+        z-index: 5;
+    }
+
+    .pull-right {
+        position: relative;
+        margin-top: 85px;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+
+    .landing-img {
+        width: 100%;
+        margin-left: 0%;
+        height: 100%;
+    }
+
+    .services-section, .process-section {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .number-container {
+        font-size: 8em;
+    }
+
+    .process {
+        margin-top: 25px;
+        grid-template-columns: 1fr;
+        grid-gap: 45px;
+    }
+
+    .process-section h3 {
+        margin-bottom: 95px;
+    }
+
+    .process h2.smaller {
+        font-size: 2em;
+    }
+}

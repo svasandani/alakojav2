@@ -231,4 +231,9 @@ button:hover {
     form#contact {
         width: 100%;
     }
+
+    .white-line::after {
+        width: 150px;
+        left: 50px;
+    }
 }

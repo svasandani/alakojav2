@@ -24,3 +24,14 @@
     font-size: 1rem;
     margin-bottom: 0.17em;
 }
+
+@media (max-width: 1000px) {
+    .clients-section {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .clients {
+        grid-template-columns: 1fr;
+    }
+}
