@@ -2,6 +2,8 @@ let landing = document.querySelector("section.landing-section");
 
 let slides = document.querySelectorAll(".landing-carousel-slide");
 
+let indicators = document.querySelectorAll(".carousel-indicator-number");
+
 let total = slides.length;
 let active = -1;
 
@@ -13,6 +15,12 @@ function changeSlide() {
     let i = active;
     active = active + 1 == total ? 0 : ++active;
     doSlideChange(i, active);
+
+    indicators.forEach((ic) => {
+        if (ic.classList.contains("indicated")) { ic.classList.remove("indicated"); }
+    });
+
+    indicators[active].classList.add("indicated");
     
     timeout = setTimeout(changeSlide, 10000);
 }

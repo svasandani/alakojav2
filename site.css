@@ -298,7 +298,7 @@ nav {
 
 main {
     min-height: 100vh;
-    margin-top: 120px;
+    margin-top: 140px;
 }
 
 @media (max-width: 1000px) {
@@ -317,4 +317,12 @@ main {
 
 .bg-1 {
     background: var(--bg-color-1);
+}
+
+.no-scroll-bar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.no-scroll-bar::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }

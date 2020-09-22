@@ -36,18 +36,21 @@
 @media (max-width: 1000px) {
     .pull-left {
         width: calc(100% - 100px);
-        height: 40vh;
-        top: auto;
-        bottom: 0px;
+        height: calc(100vh - 145px);
+        top: 50px;
         left: 50px;
         padding-top: 0;
     }
 
     .pull-right {
         width: calc(100% - 100px);
-        height: calc(60vh - 255px);
-        top: 0px;
+        height: calc(45vh - 85px);
+        top: 85px;
         left: 50px;
+    }
+
+    .pull-left p {
+        margin-top: 45vh;
     }
 
     .pull-image {
