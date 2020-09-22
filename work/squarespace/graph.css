@@ -1,0 +1,50 @@
+.graph {
+    width: 100%;
+    height: 250px;
+    background: var(--bg-color);
+    border: 1px solid var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.line {
+    width: 100%;
+    height: 100%;
+}
+
+.ball {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-color);
+    position: absolute;
+    left: calc(50% - 4px);
+    bottom: 0px;
+    animation: graph-1 8s infinite cubic-bezier(1.000, 0.000, 0.000, 1.000);
+}
+
+.bar {
+    height: 100%;
+    width: 1px;
+    background: var(--text-color);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    animation: bar 8s infinite linear;
+}
+
+.bar-1 {
+    animation-delay: 0s;
+}
+
+.bar-2 {
+    animation-delay: 2s;
+}
+
+.bar-3 {
+    animation-delay: 4s;
+}
+
+.bar-4 {
+    animation-delay: 6s;
+}
