@@ -126,6 +126,7 @@ section {
         margin-left: -50px;
         grid-template-columns: 1fr 1fr 1fr 15px;
         padding: 0 50px;
+        padding-bottom: 85px;
         overflow-x: scroll;
         overflow-y: hidden;
     }
