@@ -60,6 +60,7 @@ logo.addEventListener('mouseup', () => {
 })
 
 navlinks.forEach((nl, i) => {
+    if (nl.classList.contains("cta-link")) { return; }
     nl.addEventListener('mouseover', () => {
         if (navaway || !ready) return;
         hover = i + 1;
