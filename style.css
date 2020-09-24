@@ -10,6 +10,12 @@
     background: var(--bg-color-1);
 }
 
+@media (max-width: 1000px) {
+    .landing-section::before {
+        display: none;
+    }
+}
+
 .landing-carousel-slide {
     transition: 0.7s ease-out;
     opacity: 0;
@@ -147,17 +153,17 @@
 
 .scroll-btn {
     position: absolute;
-    width: 130px;
-    height: 200px;
-    bottom: 75px;
-    left: 5vw;
+    width: 30vh;
+    height: calc(30vh + 70px);
+    bottom: -75px;
+    left: 16vw;
     z-index: 10;
 }
 
 .scroll-btn-inner {
     font-size: 8em;
-    width: 130px;
-    height: 130px;
+    width: 30vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
