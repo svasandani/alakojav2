@@ -6,7 +6,7 @@ let msgTA = msg.querySelector("textarea");
 
 msgTA.addEventListener('input', () => {
     msgSpan.textContent = msgTA.value;
-})
+});
 
 let email = document.querySelector(".email-input");
 
@@ -58,4 +58,22 @@ emailInput.addEventListener('input', () => {
 
         bigify(emailSpan, email, 1);
     }
+});
+
+let form = document.querySelector("form#contact");
+
+let formresult = document.querySelector(".form-result");
+
+let center = document.querySelector(".contact-form .center");
+
+let aside = document.querySelector(".contact-form .aside");
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    center.classList.add("done");
+    setTimeout(() => {
+        aside.classList.add("done");
+        setTimeout(() => { formresult.classList.add("done"); }, 500);
+    }, 400);
 })
