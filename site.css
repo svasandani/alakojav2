@@ -219,8 +219,10 @@ nav {
     }
 
     h2.hollow {
-        color: var(--text-color);
-        text-shadow: none;
+        text-shadow: -0.6px 0.6px 0 var(--text-color),
+                    0.6px 0.6px 0 var(--text-color),
+                    0.6px -0.6px 0 var(--text-color),
+                    -0.6px -0.6px 0 var(--text-color);
     }
 
     header {
