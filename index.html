@@ -135,9 +135,15 @@
                 <div class="center">
                     <form id="contact">
                         <label for="email" class="float-up">Email</label>
-                        <input type="email" name="email" class="float-up" required>
+                        <div class="email-input float-up">
+                            <pre><span></span><br></pre>
+                            <input type="email" name="email" required>
+                        </div>
                         <label for="message" class="float-up">Message</label>
-                        <input type="text" name="message" class="float-up" required>
+                        <div class="message-input float-up">
+                            <pre><span></span><br></pre>
+                            <textarea name="message" required></textarea>
+                        </div>
                         <button type="submit" name="submit" class="float-up">SEND</button>
                     </form>
                 </div>
@@ -153,4 +159,5 @@
 <script src="landingcarousel.js"></script>
 <script src="bead.js"></script>
 <script src="floatup.js"></script>
+<script src="input.js"></script>
 </html>
