@@ -59,10 +59,6 @@
     transition: 0.3s ease-out;
 }
 
-.landing-section h2 {
-    transition: 0.3s ease-out;
-}
-
-.landing-section p {
+.landing-section * {
     transition: 0.3s ease-out;
 }

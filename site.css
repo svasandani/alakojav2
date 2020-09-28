@@ -35,16 +35,24 @@ h2 {
     margin-top: -0.25em;
 }
 
-h2.hollow {
+.hollow {
     /* font-family: 'Helvetica Outline'; */
     font-family: 'Inter';
     font-weight: 500;
+    font-size: 8em;
+    height: 1.1em;
     color: var(--bg-color);
-    text-shadow: -1px 1px 0 var(--text-color),
+    stroke: var(--text-color);
+    stroke-width: 2px;
+    fill: var(--bg-color);
+    width: 100vw;
+    paint-order: stroke fill;
+    /* text-shadow: -1px 1px 0 var(--text-color),
                 1px 1px 0 var(--text-color),
                 1px -1px 0 var(--text-color),
-                -1px -1px 0 var(--text-color);
+                -1px -1px 0 var(--text-color); */
     white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
 }
 
 h2.smaller {
@@ -218,11 +226,8 @@ nav {
         font-size: 4em;
     }
 
-    h2.hollow {
-        text-shadow: -0.6px 0.6px 0 var(--text-color),
-                    0.6px 0.6px 0 var(--text-color),
-                    0.6px -0.6px 0 var(--text-color),
-                    -0.6px -0.6px 0 var(--text-color);
+    .hollow {
+        font-size: 3em;
     }
 
     header {
