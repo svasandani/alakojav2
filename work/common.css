@@ -50,6 +50,10 @@
     bottom: 85px;
 }
 
+.float-up.floated.no-anim {
+    transition: none;
+}
+
 @media (max-width: 1000px) {
     .left-grid, .right-grid {
         grid-template-columns: 1fr;
