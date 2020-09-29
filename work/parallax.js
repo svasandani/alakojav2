@@ -4,7 +4,7 @@ if (screen.width > 1000) {
     let all = document.querySelectorAll(".top-layer");
 
     all.forEach((el) => {
-        el.classList.add("no-anim");
+        el.classList.remove("float-up");
     })
 
     doWork = () => {
