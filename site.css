@@ -3,15 +3,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg-color: black;
-    --bg-color-1: #232323;
-    --text-color: white;
-    --sub-text-color: #878787;
-    --medium-gray: #454545;
-    --highlight-color: #ef5774;
-}
-
 html {
     background: var(--bg-color);
     color: var(--text-color);
@@ -74,6 +65,11 @@ h4 {
     font-size: 1.4em;
 }
 
+.label {
+    font-size: 2rem;
+    color: var(--medium-gray);
+}
+
 p {
     font-size: 1.2em;
     line-height: 1.5em;
@@ -83,6 +79,10 @@ p {
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+a.text-link {
+    color: var(--highlight-color);
 }
 
 .arrow {
@@ -315,6 +315,7 @@ nav {
 main {
     min-height: 100vh;
     margin-top: 140px;
+    overflow: hidden;
 }
 
 @media (max-width: 1000px) {

@@ -1,0 +1,33 @@
+.stinger-img {
+    bottom: -20px;
+}
+
+.clipboard-section {
+    height: 100vh;
+}
+
+.photo-section {
+    min-height: 120vw;
+}
+
+.news-section {
+    height: 55vh;
+}
+
+.push-bottom {
+    bottom: 35vw;
+}
+
+.phone {
+    position: absolute;
+}
+
+.phone-1 {
+    left: 15vw;
+    bottom: calc(100% - 440px);
+}
+
+.phone-2 {
+    right: 15vw;
+    bottom: calc(70% - 440px);
+}

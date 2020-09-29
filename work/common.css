@@ -18,3 +18,43 @@
         grid-gap: 25px;
     }
 }
+
+.float-left {
+    position: absolute;
+    width: 60%;
+    left: 5vw;
+}
+
+.text-box {
+    margin-top: 1.5em;
+}
+
+.big-text {
+    font-size: 1.6em;
+}
+
+.float-right {
+    position: absolute;
+    width: 40%;
+    left: calc(100vw - 35%);
+}
+
+.stinger-section {
+    min-height: 85vh;
+}
+
+.phone {
+    width: 25vmax;
+    height: 50vmax;
+}
+
+.bg-paint {
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+}
+
+.push-bottom {
+    position: absolute;
+    bottom: 85px;
+}
