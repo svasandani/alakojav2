@@ -66,13 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function addFadeOut(fader, link, e) {
     const listener = () => {
-        window.location = link.href;
+        window.location = link.href; 
         fader.removeEventListener('animationend', listener);
     };
+
+    if (window.location.pathname.length < 2) {
+        document.documentElement.classList.add("light-mode");
+    } else if (link.pathname.length < 2) {
+        document.documentElement.classList.remove("light-mode");
+        document.documentElement.classList.add("dark-mode");
+    }
 
     fader.addEventListener('animationend', listener);
 
     e.preventDefault();
+
     fader.classList.add("fade-in");
 }
 

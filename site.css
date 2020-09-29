@@ -11,6 +11,7 @@ html {
     font-weight: 300;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    transition: 0.4s ease-out;
 }
 
 body {

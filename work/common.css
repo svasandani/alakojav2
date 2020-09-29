@@ -10,15 +10,6 @@
     grid-template-columns: 1fr 2fr;
 }
 
-@media (max-width: 1000px) {
-    .left-grid, .right-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        margin-bottom: 85px;
-        grid-gap: 25px;
-    }
-}
-
 .float-left {
     position: absolute;
     width: 60%;
@@ -57,4 +48,43 @@
 .push-bottom {
     position: absolute;
     bottom: 85px;
+}
+
+@media (max-width: 1000px) {
+    .left-grid, .right-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        margin-bottom: 85px;
+        grid-gap: 25px;
+    }
+
+    .big-text {
+        font-size: 1.2rem;
+    }
+
+    .float-left, .float-right {
+        position: relative;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .stinger-img {
+        margin-top: 1.2rem;
+    }
+
+    .bg-paint {
+        display: none;
+    }
+
+    .phone {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .push-bottom {
+        position: relative;
+        bottom: auto;
+    }
 }

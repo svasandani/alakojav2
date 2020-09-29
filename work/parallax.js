@@ -1,9 +1,13 @@
-let all = document.querySelectorAll(".top-layer");
+let doWork = () => { };
 
-const doWork = () => {
-    let scrollP = window.scrollY / window.innerHeight;
+if (screen.width > 1000) {
+    let all = document.querySelectorAll(".top-layer");
 
-    all.forEach((el) => {
-        el.style.marginBottom = (scrollP * el.getAttribute("data-mm") - el.getAttribute("data-os")) + "px";
-    })
+    doWork = () => {
+        let scrollP = window.scrollY / window.innerHeight;
+
+        all.forEach((el) => {
+            el.style.marginBottom = (scrollP * el.getAttribute("data-mm") - el.getAttribute("data-os")) + "px";
+        })
+    }
 }

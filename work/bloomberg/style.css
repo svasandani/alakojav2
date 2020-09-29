@@ -3,19 +3,19 @@
 }
 
 .clipboard-section {
-    height: 100vh;
+    height: 80vh;
 }
 
 .photo-section {
-    min-height: 120vw;
+    min-height: 115vw;
 }
 
 .news-section {
-    height: 55vh;
+    min-height: 55vh;
 }
 
 .push-bottom {
-    bottom: 35vw;
+    bottom: 37vw;
 }
 
 .phone {
@@ -30,4 +30,38 @@
 .phone-2 {
     right: 15vw;
     bottom: calc(70% - 440px);
+}
+
+@media (max-width: 1000px) {
+    .phone {
+        position: relative;
+    }
+
+    .clipboard-section {
+        height: 110vh;
+    }
+
+    .phone-1, .phone-2 {
+        left: auto;
+        right: auto;
+        height: auto;
+        bottom: auto;
+        margin-bottom: 2.7rem;
+    }
+
+    .phone-1 {
+        margin-top: -100%;
+    }
+
+    .push-bottom {
+        bottom: auto;
+    }
+
+    .photo-section .push-bottom {
+        margin-bottom: 24vh;
+    }
+
+    .news-section .phone-2 {
+        margin-top: -100%;
+    }
 }
