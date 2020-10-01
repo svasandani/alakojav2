@@ -1,5 +1,7 @@
 let doWork = () => { };
 
+let regex = /translateY(.{2,12})/;
+
 if (screen.width > 1000) {
     let all = document.querySelectorAll(".top-layer");
 
@@ -11,7 +13,9 @@ if (screen.width > 1000) {
         let scrollP = window.scrollY / window.innerHeight;
 
         all.forEach((el) => {
-            el.style.marginBottom = (scrollP * el.getAttribute("data-mm") - el.getAttribute("data-os")) + "px";
+            let t = el.style.transform;
+            t = t.replace(regex, "");
+            el.style.transform = t + " translateY(" + (el.getAttribute("data-os") - scrollP * el.getAttribute("data-mm")) + "px)";
         })
     }
 }
