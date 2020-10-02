@@ -7,7 +7,7 @@ balls.forEach((ball, i) => {
 
 let svg = document.querySelector(".line");
 
-const doWork = () => {
+let doWork = () => {
     svg.innerHTML = "";
 
     balls.forEach((ball, i) => {

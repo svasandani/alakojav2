@@ -27,6 +27,25 @@
     height: 650px;
 }
 
+.reliability-section {
+    height: 75vh;
+}
+
+.merge-section {
+    min-height: 65vw;
+}
+
+.wide-ss {
+    position: absolute;
+    left: 5vw;
+    width: 65vw;
+}
+
+.bg-paint {
+    top: 0px;
+    height: 100%;
+}
+
 @media (max-width: 1000px) {
     .figure-quote {
         height: auto;
