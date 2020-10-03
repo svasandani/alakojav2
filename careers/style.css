@@ -19,6 +19,10 @@
     margin-bottom: 0.6em;
 }
 
+.location p {
+    margin-bottom: 0.17em;
+}
+
 @media (max-width: 1000px) {
     .stinger-img {
         width: 100%;
