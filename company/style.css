@@ -1,5 +1,55 @@
 .landing-img {
     width: 100%;
     height: 500px;
-    margin-top: 2em;
+    margin-top: 3em;
+}
+
+.goals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+    margin-top: 10vh;
+}
+
+.goal {
+    width: 300px;
+    margin-bottom: 5vh;
+}
+
+.goal img {
+    margin-bottom: 1.2em;
+}
+
+.goal h4 {
+    margin-bottom: 0.6em;
+}
+
+.goal p {
+    font-size: 1rem;
+}
+
+.mission {
+    margin-top: 10vh;
+    padding: 24px;
+    width: 50%;
+    border: 1px solid var(--text-color);
+}
+
+.mission p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+    .goals {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .goal {
+        width: 100%;
+    }
+
+    .mission {
+        width: 100%;
+    }
 }
