@@ -84,6 +84,24 @@ a {
 
 a.text-link {
     color: var(--highlight-color);
+    position: relative;
+}
+
+a.text-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    height: 2px;
+    border-radius: 1px;
+    left: 0px;
+    width: 0px;
+    background: var(--highlight-color);
+    transition: 0.2s ease-out;
+}
+
+a.text-link:hover::after {
+    width: 100%;
+    transition: 0.2s ease-out;
 }
 
 .arrow {

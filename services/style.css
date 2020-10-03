@@ -11,7 +11,6 @@
 }
 
 .services-section, .process-section {
-    padding-top: 5vh;
     padding-bottom: 15vh;
 }
 
@@ -25,7 +24,6 @@
 .service {
     display: grid;
     grid-template-columns: 1fr;
-    margin-bottom: 5vh;
 }
 
 .service img {
@@ -99,6 +97,10 @@
     .services {
         grid-template-columns: 1fr;
         grid-gap: 15px;
+    }
+
+    .service {
+        margin-bottom: 5vh;
     }
 
     .number-container {

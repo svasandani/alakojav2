@@ -24,6 +24,10 @@
 }
 
 @media (max-width: 1000px) {
+    .stinger-text {
+        width: 100%;
+    }
+
     .stinger-img {
         width: 100%;
     }
@@ -31,5 +35,9 @@
     .careers {
         grid-template-columns: 1fr;
         grid-gap: 15px;
+    }
+
+    .location {
+        margin-bottom: 5vh;
     }
 }

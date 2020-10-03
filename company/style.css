@@ -13,7 +13,6 @@
 
 .goal {
     width: 300px;
-    margin-bottom: 5vh;
 }
 
 .goal img {
@@ -47,6 +46,7 @@
 
     .goal {
         width: 100%;
+        margin-bottom: 5vh;
     }
 
     .mission {
