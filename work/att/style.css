@@ -1,0 +1,126 @@
+.stinger-img {
+    bottom: -20px;
+}
+
+.image-section {
+    height: 70vh;
+}
+
+.hero-left, .hero-right, .social-hero, .social-ss {
+    position: absolute;
+    z-index: 98;
+}
+
+.hero-left {
+    left: 0;
+    top: -45vh;
+    width: 45vw;
+}
+
+.hero-right {
+    right: 5vw;
+    top: -5vh;
+    width: 65vw;
+}
+
+.photo-section {
+    min-height: 115vw;
+}
+
+.social-section {
+    position: relative;
+    height: 80vh;
+}
+
+.social-hero {
+    right: 0;
+    width: 45vw;
+}
+
+.social-ss {
+    left: 50vw;
+    width: 30vw;
+}
+
+.call-section {
+    height: auto;
+    position: relative;
+}
+
+.call-section .text-box {
+    width: 25vw;
+}
+
+.call-images {
+    left: 37vw;
+    width: 65vw;
+    top: 180px;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.call-images .square {
+    height: 25vw;
+    width: 25vw;
+    margin-right: 35px;
+    margin-bottom: 35px;
+}
+
+@media (max-width: 1000px) {
+    .stinger-section {
+        min-height: 80vh;
+    }
+
+    .image-section {
+        height: 90vh;
+        padding-bottom: 0;
+    }
+
+    .hero-left {
+        top: -40vh;
+        width: calc(100vw - 50px);
+    }
+
+    .hero-right {
+        top: -25vw;
+        left: auto;
+        right: auto;
+        width: calc(100vw - 100px);
+    }
+
+    .social-section {
+        height: auto;
+    }
+
+    .social-hero {
+        top: -70vh;
+        width: calc(80vw - 50px);
+    }
+
+    .social-ss {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .call-section .text-box {
+        width: 100%;
+    }
+
+    .call-images {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        display: block;
+    }
+
+    .call-images .square {
+        width: calc(100vw - 100px);
+        height: calc(100vw - 100px);
+        margin-right: 0;
+    }
+}
