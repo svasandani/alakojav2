@@ -59,7 +59,7 @@
 
 .number-container::after {
     content: '';
-    width: 100px;
+    width: 250px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -119,5 +119,9 @@
 
     .process h2.smaller {
         font-size: 2em;
+    }
+
+    .number-container::after {
+        width: 150px;
     }
 }
