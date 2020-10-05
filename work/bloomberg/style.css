@@ -38,7 +38,8 @@
     }
 
     .clipboard-section {
-        height: 110vh;
+        height: auto;
+        padding-bottom: 30vh;
     }
 
     .phone-1, .phone-2 {
