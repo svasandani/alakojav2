@@ -1,6 +1,6 @@
 .clients-section {
-    padding-top: 5vh;
-    padding-bottom: 15vh;
+    padding-top: 120px;
+    padding-bottom: 25vh;
 }
 
 .clients {
@@ -25,6 +25,44 @@
     margin-bottom: 0.17em;
 }
 
+.text-box {
+    margin-top: 1em;
+    width: 30vw;
+}
+
+.nyu-section {
+    position: relative;
+}
+
+.laptop-right {
+    position: absolute;
+    top: -50%;
+    right: 5vw;
+    width: 50vw;
+    z-index: 98;
+}
+
+.monster-section {
+    position: relative;
+}
+
+.ipad-right {
+    top: 0;
+}
+
+.card-gallery {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 35px;
+}
+
+.wide-banner {
+    width: 100%;
+    height: calc(100vh - 200px);
+    margin-bottom: 2em;
+}
+
 @media (max-width: 1000px) {
     .clients-section {
         padding-top: 85px;
@@ -33,5 +71,36 @@
 
     .clients {
         grid-template-columns: 1fr;
+    }
+
+    .text-box {
+        width: 100%;
+    }
+
+    .spacer-section {
+        display: none;
+    }
+
+    .nyu-section {
+        padding-top: 0px;
+    }
+
+    .laptop-right {
+        width: 100%;
+        position: relative;
+        right: auto;
+        top: -2em;
+        margin-bottom: 0;
+    }
+
+    .card-gallery {
+        margin-top: 1em;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    .wide-banner {
+        margin-bottom: 1em;
+        height: auto;
     }
 }
