@@ -78,7 +78,8 @@
     }
 
     .spacer-section {
-        display: none;
+        height: 0px;
+        padding: 0;
     }
 
     .nyu-section {
