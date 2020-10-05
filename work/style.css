@@ -63,6 +63,16 @@
     margin-bottom: 2em;
 }
 
+.banner-fill {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.card img.banner-fill {
+    transition: 3s ease-out;
+}
+
 @media (max-width: 1000px) {
     .clients-section {
         padding-top: 85px;

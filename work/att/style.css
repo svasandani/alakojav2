@@ -67,6 +67,11 @@
     margin-bottom: 35px;
 }
 
+.square video {
+    height: 100%;
+    width: 100%;
+}
+
 @media (max-width: 1000px) {
     .stinger-section {
         min-height: 80vh;
