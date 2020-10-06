@@ -23,10 +23,12 @@
 
 .pull-text-padding {
     height: calc(80vh - 70%);
+    pointer-events: none;
 }
 
 .pull-text {
     z-index: 5;	
+    pointer-events: none;
 }
 
 .landing-carousel-slide .pull-text {
@@ -95,7 +97,6 @@
 
 .skew {
     width: 450px;
-    height: 800px;
     transform: rotateX(40deg) rotateY(15deg) rotateZ(-25deg);
 }
 
@@ -126,7 +127,6 @@
 @media (max-width: 1000px) {
     .skew {
         width: 250px;
-        height: 400px;
     }
 
     .o-t-landing .bounce {
@@ -148,7 +148,6 @@
 }
 
 .bg-1 {
-    background: var(--bg-color-1);
 }
 
 .scroll-btn {

@@ -312,6 +312,7 @@ nav {
 
     .pull-text-padding {
         display: none;
+        pointer-events: none;
     }
 
     .pull-left {
@@ -319,6 +320,7 @@ nav {
         height: 100%;
         top: 0;
         padding: 0;
+        pointer-events: none;
     }
     
     .pull-right {
@@ -352,7 +354,6 @@ main {
 }
 
 .bg-1 {
-    background: var(--bg-color-1);
 }
 
 .no-scroll-bar {

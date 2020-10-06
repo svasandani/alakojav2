@@ -6,6 +6,25 @@ let indicators = document.querySelectorAll(".carousel-indicator-number");
 
 let total = slides.length;
 let active = -1;
+let lock = false;
+let click = false;
+let n = 0;
+
+indicators.forEach((id) => {  
+    id.addEventListener("click", () => {
+        if (lock) return;
+
+        clearTimeout(timeout);
+
+        n = id.getAttribute("data-pos");
+
+        if (n == active) return;
+
+        click = true;
+
+        changeSlide();
+    })
+});
 
 changeSlide();
 
@@ -14,7 +33,17 @@ var timeout = setTimeout(() => {}, 10000);
 function changeSlide() {
     let i = active;
     active = active + 1 == total ? 0 : ++active;
+
+    if (click) {
+        active = n;
+    }
+
+
+    console.log(i,active);
+
+    lock = true;
     doSlideChange(i, active);
+    setTimeout(() => { lock = false; }, 1000);
 
     indicators.forEach((ic) => {
         if (ic.classList.contains("indicated")) { ic.classList.remove("indicated"); }
