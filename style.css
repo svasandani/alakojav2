@@ -147,23 +147,22 @@
     }
 }
 
-.bg-1 {
-}
-
 .scroll-btn {
     position: absolute;
-    width: 30vh;
-    height: calc(30vh + 70px);
-    bottom: -75px;
+    width: 18vh;
+    height: 18vh;
+    bottom: 5vh;
     left: 16vw;
     z-index: 10;
 }
 
 .scroll-btn-inner {
     font-size: 8em;
-    width: 30vh;
-    height: 30vh;
-    display: flex;
+    width: 18vh;
+    height: 18vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 18vh;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -173,25 +172,24 @@
     color: var(--sub-text-color);
     fill: var(--sub-text-color);
     border: 1px solid var(--sub-text-color);
-    transition: 0.1s ease-out;
     z-index: 10;
     text-align: center;
+    overflow: hidden;
+    padding-top: 25%;
 }
 
 .scroll-btn svg {
-    transform: scale(2.6);
+    margin: 0 auto;
+    transform: scale(2.6) translateY(-6.923vh);
 }
 
-.scroll-btn:hover .scroll-btn-inner {
+.scroll-btn:hover {
     cursor: pointer;
-    top: 70px;
-    transition: 0.1s ease-out;
 }
 
-.scroll-btn-inner:hover {
-    cursor: pointer;
-    top: 70px;
-    transition: 0.1s ease-out;
+.scroll-btn:hover svg {
+    transform: scale(2.6) translateY(1.2vh);
+    transition: 0.4s ease-out;
 }
 
 .next-slide {
