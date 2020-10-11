@@ -39,24 +39,12 @@
     height: 55vh;
 }
 
-.reliability-section {
-    min-height: 35vh;
-}
-
-.image-section {
-    min-height: 25vh;
-}
-
-.story-section {
-    min-height: 65vw;
-}
-
 .wide-ss {
     position: absolute;
-    left: 5vw;
+    right: 5vw;
     top: -50%;
-    height: 60vh;
-    width: 65vw;
+    height: 30vw;
+    width: 45vw;
     z-index: 98;
 }
 
