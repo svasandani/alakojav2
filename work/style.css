@@ -139,6 +139,7 @@
         width: 100%;
         position: relative;
         right: auto;
+        left: auto;
         top: -2em;
         margin-bottom: 0;
     }
@@ -160,6 +161,6 @@
 
     .wide-banner {
         margin-bottom: 1em;
-        height: auto;
+        height: 50vw;
     }
 }
