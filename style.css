@@ -105,17 +105,17 @@
 }
 
 .o-t-landing .bounce {
-    right: calc(50% - 280px);
+    right: calc(70% - 280px);
     position: absolute;
 }
 
 .o-t-landing .bounce.top {
-    top: -12vh;
+    top: 0vh;
     animation-duration: 9s;
 }
 
 .o-t-landing .bounce.mid {
-    top: 9vh;
+    top: 13vh;
     animation-duration: 8s;
 }
 
@@ -149,20 +149,20 @@
 
 .scroll-btn {
     position: absolute;
-    width: 18vh;
-    height: 18vh;
-    bottom: 5vh;
-    left: 16vw;
+    width: 9vh;
+    height: 9vh;
+    bottom: 13vh;
+    left: 5vw;
     z-index: 10;
 }
 
 .scroll-btn-inner {
     font-size: 8em;
-    width: 18vh;
-    height: 18vh;
+    width: 9vh;
+    height: 9vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 18vh;
+    grid-gap: 9vh;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -180,7 +180,7 @@
 
 .scroll-btn svg {
     margin: 0 auto;
-    transform: scale(2.6) translateY(-6.923vh);
+    transform: scale(1) translateY(-10.5vh);
 }
 
 .scroll-btn:hover {
@@ -188,7 +188,7 @@
 }
 
 .scroll-btn:hover svg {
-    transform: scale(2.6) translateY(1.2vh);
+    transform: scale(1) translateY(0.8vh);
     transition: 0.4s ease-out;
 }
 

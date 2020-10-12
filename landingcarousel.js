@@ -35,15 +35,14 @@ function changeSlide() {
     active = active + 1 == total ? 0 : ++active;
 
     if (click) {
-        active = n;
+        active = parseInt(n);
     }
 
-
-    console.log(i,active);
+    console.log(total,i,active);
 
     lock = true;
     doSlideChange(i, active);
-    setTimeout(() => { lock = false; }, 1000);
+    setTimeout(() => { lock = false; click = false; }, 1000);
 
     indicators.forEach((ic) => {
         if (ic.classList.contains("indicated")) { ic.classList.remove("indicated"); }
@@ -75,7 +74,6 @@ function doSlideChange(i, j) {
         }, 500);
     }, 1000);
     setTimeout(() => { slides[j].querySelector(".pull-image").style.opacity = "1"; }, 500);
-    
 }
 
 /************************************************

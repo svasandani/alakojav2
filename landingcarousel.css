@@ -1,6 +1,14 @@
+.landing-section h2 {
+    margin-bottom: 1.8rem;
+}
+
+.o-t-landing .skew {
+    width: 300px;
+}
+
 .c-d-landing .card {
     margin: 25px;
-    height: 55%;
+    height: auto;
     width: calc(50% - 50px);
     flex-grow: 1;
     animation: fade-in 2s ease-out;
@@ -11,10 +19,14 @@
     object-position: center top;
 }
 
+.o-t-landing .pull-right {
+    height: 200%;
+}
+
 .carousel-indicator {
     position: absolute;
-    top: 2em;
-    left: 60px;
+    top: calc(80vh - 70% - 2em);
+    left: calc(5vw + 8px);
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -34,6 +46,17 @@
     background: var(--text-color);
 }
 
+.laptop-carousel {
+    height: 80%;
+    padding-left: 10%;
+    padding-top: 15vh;
+    overflow: hidden;
+}
+
+.laptop-carousel img {
+    width: 127%;
+}
+
 @media (max-width: 1000px) {
     .c-d-landing .card {
         width: calc(50% - 25px);
@@ -50,10 +73,26 @@
         margin-right: 25px;
     }
 
+    .o-t-landing .pull-right {
+        height: calc(45vh - 85px);
+    }
+
     .carousel-indicator {
         grid-template-columns: 1fr;
         top: 50px;
         left: 19px;
+    }
+
+    .laptop-carousel {
+        padding: 0;
+        padding-top: 10vh;
+        width: 100%;
+    }
+    
+    .laptop-carousel img {
+        height: auto;
+        margin: auto 0;
+        width: 100%;
     }
 }
 

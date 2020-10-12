@@ -1,6 +1,6 @@
 .clients-section {
     padding-top: 120px;
-    padding-bottom: 25vh;
+    padding-bottom: 120px;
     background: linear-gradient(160deg, var(--bg-color-1), var(--bg-color));
 }
 
@@ -14,6 +14,7 @@
 .client {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     margin-bottom: 5vh;
 }
 
@@ -24,6 +25,7 @@
 .client p {
     font-size: 1rem;
     margin-bottom: 0.17em;
+    color: var(--sub-text-color);
 }
 
 .text-box {
@@ -35,11 +37,15 @@
     position: relative;
 }
 
+.fashion-section {
+    padding-bottom: 120px;
+}
+
 .laptop-right {
     position: absolute;
     top: -50%;
-    right: 5vw;
-    width: 50vw;
+    left: 40vw;
+    width: 55vw;
     z-index: 98;
 }
 
@@ -48,11 +54,39 @@
 }
 
 .ipad-right {
-    top: 0;
+    top: auto;
+    bottom: 25px;
+    width: 40vw;
+    left: auto;
+    right: 15vw;
+}
+
+.laptop-right .ipad {
+    width: 100%;
+    z-index: 1;
+}
+
+.laptop-right .video {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.laptop-right .people {
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 30%;
+    z-index: 3;
 }
 
 .card-gallery {
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-gap: 35px;
@@ -72,6 +106,10 @@
 
 .card img.banner-fill {
     transition: 3s ease-out;
+}
+
+.got-section {
+    padding-top: 120px;
 }
 
 @media (max-width: 1000px) {
@@ -103,6 +141,15 @@
         right: auto;
         top: -2em;
         margin-bottom: 0;
+    }
+    
+    .laptop-right .people {
+        display: none;
+        position: absolute;
+        bottom: -15%;
+        right: -10%;
+        width: 30%;
+        z-index: 3;
     }
 
     .card-gallery {
