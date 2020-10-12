@@ -29,9 +29,9 @@
 
 .mission {
     margin-top: 10vh;
-    padding: 24px;
+    /* padding: 24px; */
     width: 50%;
-    border: 1px solid var(--text-color);
+    /* border: 1px solid var(--text-color); */
 }
 
 .mission p {

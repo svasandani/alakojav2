@@ -1,10 +1,14 @@
 .c-d-landing .card {
     margin: 25px;
-    height: 60%;
+    height: 55%;
     width: calc(50% - 50px);
     flex-grow: 1;
     animation: fade-in 2s ease-out;
     animation-fill-mode: forwards;
+}
+
+.c-d-landing .card img {
+    object-position: center top;
 }
 
 .carousel-indicator {
